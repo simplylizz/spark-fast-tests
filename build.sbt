@@ -1,6 +1,6 @@
 enablePlugins(GitVersioning)
 
-scalafmtOnCompile in Compile := true
+Compile / scalafmtOnCompile := true
 
 organization := "com.github.simplylizz"
 name := "spark-fast-tests"
@@ -29,7 +29,7 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % "test"
 
 credentials += Credentials(Path.userHome / ".sbt" / "sonatype_credentials")
 
-fork in Test := true
+Test / fork := true
 javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:+CMSClassUnloadingEnabled", "-Duser.timezone=GMT")
 
 licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT"))
@@ -42,4 +42,4 @@ publishMavenStyle := true
 
 publishTo := sonatypePublishToBundle.value
 
-Global/useGpgPinentry := true
+Global / useGpgPinentry := true
