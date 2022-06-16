@@ -1,5 +1,5 @@
 // Vendored from https://github.com/lihaoyi/fansi
-package com.github.mrpowers.spark.fast.tests
+package com.github.simplylizz.spark.fast.tests
 
 package ufansi
 

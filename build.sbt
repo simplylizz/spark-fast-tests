@@ -2,7 +2,7 @@ enablePlugins(GitVersioning)
 
 scalafmtOnCompile in Compile := true
 
-organization := "com.github.mrpowers"
+organization := "com.github.simplylizz"
 name := "spark-fast-tests"
 
 version := "1.3.0"
@@ -34,11 +34,8 @@ fork in Test := true
 javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:+CMSClassUnloadingEnabled", "-Duser.timezone=GMT")
 
 licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT"))
-homepage := Some(url("https://github.com/MrPowers/spark-fast-tests"))
-developers ++= List(
-  Developer("MrPowers", "Matthew Powers", "@MrPowers", url("https://github.com/MrPowers"))
-)
-scmInfo := Some(ScmInfo(url("https://github.com/MrPowers/spark-fast-tests"), "git@github.com:MrPowers/spark-fast-tests.git"))
+homepage := Some(url("https://github.com/simplylizz/spark-fast-tests"))
+scmInfo := Some(ScmInfo(url("https://github.com/simplylizz/spark-fast-tests"), "git@github.com:simplylizz/spark-fast-tests.git"))
 
 updateOptions := updateOptions.value.withLatestSnapshots(false)
 

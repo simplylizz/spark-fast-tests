@@ -1,4 +1,4 @@
-package com.github.mrpowers.spark.fast.tests
+package com.github.simplylizz.spark.fast.tests
 
 import org.apache.spark.sql.types.{IntegerType, StringType}
 import SparkSessionExt._

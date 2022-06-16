@@ -1,4 +1,4 @@
-package com.github.mrpowers.spark.fast.tests
+package com.github.simplylizz.spark.fast.tests
 
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.Row

@@ -1,6 +1,6 @@
-package com.github.mrpowers.spark.fast.tests
+package com.github.simplylizz.spark.fast.tests
 
-import com.github.mrpowers.spark.fast.tests.DatasetComparerLike.naiveEquality
+import com.github.simplylizz.spark.fast.tests.DatasetComparerLike.naiveEquality
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{DataFrame, Dataset, Row}
 import org.apache.spark.sql.functions._

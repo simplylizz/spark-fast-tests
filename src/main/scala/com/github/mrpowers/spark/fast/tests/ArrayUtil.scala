@@ -1,7 +1,7 @@
-package com.github.mrpowers.spark.fast.tests
+package com.github.simplylizz.spark.fast.tests
 
 import java.sql.Date
-import com.github.mrpowers.spark.fast.tests.ufansi.EscapeAttr
+import com.github.simplylizz.spark.fast.tests.ufansi.EscapeAttr
 import java.time.format.DateTimeFormatter
 import org.apache.commons.lang3.StringUtils
 

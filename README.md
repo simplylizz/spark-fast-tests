@@ -1,6 +1,6 @@
 # spark-fast-tests
 
-[![CI](https://github.com/MrPowers/spark-fast-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/MrPowers/spark-fast-tests/actions/workflows/ci.yml)
+[![CI](https://github.com/simplylizz/spark-fast-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/simplylizz/spark-fast-tests/actions/workflows/ci.yml)
 
 A fast Apache Spark testing helper library with beautifully formatted error messages!  Works with [scalatest](https://github.com/scalatest/scalatest), [uTest](https://github.com/lihaoyi/utest), and [munit](https://github.com/scalameta/munit).
 
@@ -14,18 +14,14 @@ Fetch the JAR file from Maven.
 
 ```scala
 // for Spark 3
-libraryDependencies += "com.github.mrpowers" %% "spark-fast-tests" % "1.1.0" % "test"
-
-// for Spark 2
-libraryDependencies += "com.github.mrpowers" %% "spark-fast-tests" % "0.23.0" % "test"
+libraryDependencies += "com.github.simplylizz" %% "spark-fast-tests" % "2.0.0" % "test"
 ```
 
 Here's a link to the releases for different Scala versions:
 
-* [Scala 2.11 JAR files](https://repo1.maven.org/maven2/com/github/mrpowers/spark-fast-tests_2.11/)
-* [Scala 2.12 JAR files](https://repo1.maven.org/maven2/com/github/mrpowers/spark-fast-tests_2.12/)
-* [Scala 2.13 JAR files](https://repo1.maven.org/maven2/com/github/mrpowers/spark-fast-tests_2.13/)
-* [Legacy JAR files in Maven](https://mvnrepository.com/artifact/MrPowers/spark-fast-tests?repo=spark-packages).
+* [Scala 2.11 JAR files](https://repo1.maven.org/maven2/com.github.simplylizz.spark.fast.tests_2.11/)
+* [Scala 2.12 JAR files](https://repo1.maven.org/maven2/com.github.simplylizz.spark.fast.tests_2.12/)
+* [Scala 2.13 JAR files](https://repo1.maven.org/maven2/com.github.simplylizz.spark.fast.tests_2.13/)
 
 You should use Scala 2.11 with Spark 2 and Scala 2.12 / 2.13 with Spark 3.
 
@@ -66,7 +62,7 @@ val expectedDS = Seq(
 ).toDS
 ```
 
-![assert_small_dataset_equality_error_message](https://github.com/MrPowers/spark-fast-tests/blob/master/images/assertSmallDatasetEquality_error_message.png)
+![assert_small_dataset_equality_error_message](https://github.com/simplylizz/spark-fast-tests/blob/master/images/assertSmallDatasetEquality_error_message.png)
 
 The colors in the error message make it easy to identify the rows that aren't equal.
 
@@ -133,7 +129,7 @@ The `DatasetComparer` trait defines the `assertSmallDatasetEquality` method.  Ex
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.functions._
-import com.github.mrpowers.spark.fast.tests.DatasetComparer
+import com.github.simplylizz.spark.fast.tests.DatasetComparer
 
 class DatasetSpec extends FunSpec with SparkSessionTestWrapper with DatasetComparer {
 
@@ -194,12 +190,12 @@ The following code will throw a `ColumnMismatch` error message:
 assertColumnEquality(df, "name", "expected_name")
 ```
 
-![assert_column_equality_error_message](https://github.com/MrPowers/spark-fast-tests/blob/master/images/assertColumnEquality_error_message.png)
+![assert_column_equality_error_message](https://github.com/simplylizz/spark-fast-tests/blob/master/images/assertColumnEquality_error_message.png)
 
 Mix in the `ColumnComparer` trait to your test class to access the `assertColumnEquality` method:
 
 ```scala
-import com.github.mrpowers.spark.fast.tests.ColumnComparer
+import com.github.simplylizz.spark.fast.tests.ColumnComparer
 
 object MySpecialClassTest
     extends TestSuite
@@ -362,7 +358,7 @@ Open an issue or send a pull request to contribute.  Anyone that makes good cont
 Create a `CustomFramework` class with overrides that turn off the default uTest color settings.
 
 ```scala
-package com.github.mrpowers.spark.fast.tests
+package com.github.simplylizz.spark.fast.tests
 
 class CustomFramework extends utest.runner.Framework {
   override def formatWrapWidth: Int = 300
@@ -379,7 +375,7 @@ class CustomFramework extends utest.runner.Framework {
 Update the `build.sbt` file to use the `CustomFramework` class:
 
 ```scala
-testFrameworks += new TestFramework("com.github.mrpowers.spark.fast.tests.CustomFramework")
+testFrameworks += new TestFramework("com.github.simplylizz.spark.fast.tests.CustomFramework")
 ```
 
 
